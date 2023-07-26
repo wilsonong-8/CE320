@@ -25,7 +25,7 @@ class LoginPage(tk.Frame):
         self.course_input = ttk.Combobox(master=self, state="readonly")
         self.course_input.pack()
 
-        self.button = ttk.Button(master=self, text='Submit', command=self.submit)
+        self.button = ttk.Button(master=self, text='Submit', command=self.submit_student_info)
         self.button.pack()
 
         self.set_course_list()
@@ -34,12 +34,17 @@ class LoginPage(tk.Frame):
         try:
             course_list = self.client_socket.retrieve_course_list()
             self.course_input["values"] = course_list
+            # self.course_input.set(course_list[0])
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
-    def submit(self):
+    def submit_student_info(self):
         student_id = self.student_id_input.get()
         seat_no = self.seat_input.get()
         course_no = self.course_input.get()
-        print(f"{student_id} + {seat_no} + {course_no}")
-        self.client_socket.submit_login_details(student_id,seat_no,course_no)
+        try:
+            course_topic = self.client_socket.submit_login_details(student_id,seat_no,course_no)
+            self.master.from_login_to_request_page(course_topic)
+        except Exception as e:
+            print(e)
+            messagebox.showerror("Error", "Unable to retrieve Topics, please approach the Lecturer")

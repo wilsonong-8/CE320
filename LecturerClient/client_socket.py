@@ -8,8 +8,6 @@ class ClientSocket:
         self.SERVER = socket.gethostbyname(socket.gethostname())
         self.ADDR = (self.SERVER, self.PORT)
         self.FORMAT = 'utf-8'
-
-
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client.connect(self.ADDR)
 
@@ -31,33 +29,16 @@ class ClientSocket:
         body = self.client.recv(body_length).decode()
         return json.loads(body)
 
-    def retrieve_course_list(self):
-        self.send_message("!COURSE_LIST", "Here to retrieve Course List")
-        message = self.receive_message()
-
-        if message["type"] == "COURSE_LIST":
-            course_list = json.loads(message["data"])
-            print("Received Course List:", course_list)
-            return course_list
-
-    def submit_login_details(self, student_id, seat_no, course_no):
+    def submit_login(self, lecturer_name):
         login_details = {
-            "student_id": student_id,
-            "seat_no": seat_no,
-            "course_no": course_no
+            "lecturer_name": lecturer_name
         }
-        self.send_message("!LOGIN", login_details)
+        self.send_message("!LOGIN_LECTURER", login_details)
         message = self.receive_message()
 
-        if message["type"] == "!COURSE_TOPIC":
-            course_topic = message["data"]["course_topic"]
-            print("Received Course Topic:", course_topic)
-            return course_topic
+        if message["type"] == "!REQUEST_LIST":
+            request_list = message["data"]["request_list"]
+            print("Received Request List:", request_list)
 
-    def submit_request(self, topic_choice, priority_choice, description):
-        request_details = {
-            "topic_choice": topic_choice,
-            "priority_choice": priority_choice,
-            "description" : description
-        }
-        self.send_message("!REQUEST", request_details)
+
+

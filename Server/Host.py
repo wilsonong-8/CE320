@@ -1,6 +1,8 @@
 class Host:
     def __init__(self):
         self.request_list = []
+        self.student_list = []
+        self.lecturer_list = []
         self.course_dict = {
             'CE320: Large Scale Software Programming': ['Agile Software Development', 'Extreme Programming',
                                                         'Planning in XP', 'Developing in XP', 'Clean Code',
