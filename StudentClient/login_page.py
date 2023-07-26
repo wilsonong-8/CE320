@@ -42,4 +42,4 @@ class LoginPage(tk.Frame):
         seat_no = self.seat_input.get()
         course_no = self.course_input.get()
         print(f"{student_id} + {seat_no} + {course_no}")
-        return student_id, seat_no, course_no
+        self.client_socket.submit_login_details(student_id,seat_no,course_no)

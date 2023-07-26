@@ -38,3 +38,11 @@ class ClientSocket:
             course_list = json.loads(message["data"])
             print("Received Course List:", course_list)
             return course_list
+
+    def submit_login_details(self, student_id, seat_no, course_no):
+        login_details = {
+            "student_id": student_id,
+            "seat_no": seat_no,
+            "course_no": course_no
+        }
+        self.send_message("!LOGIN", login_details)

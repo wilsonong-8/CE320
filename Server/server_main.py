@@ -2,6 +2,7 @@ import socket
 import threading
 import json
 from Host import Host
+from Student import Student
 
 
 HEADER = 1024
@@ -14,6 +15,8 @@ DISCONNECT_MESSAGE = "!DISCONNECT"
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 host = Host()
+
+student_list = []
 
 
 def handle_client(conn, addr):
@@ -36,6 +39,18 @@ def handle_client(conn, addr):
             course_dict_keys = list(host.course_dict.keys())
             response = json.dumps(course_dict_keys)
             send_message(conn, "COURSE_LIST", response)
+
+        elif message_type == "!LOGIN":
+            # Handle the login details
+            student_id = message_data.get("student_id")
+            seat_no = message_data.get("seat_no")
+            course_no = message_data.get("course_no")
+
+            new_student = Student(student_id,seat_no,course_no,addr)
+            student_list.append(new_student)
+            print(
+                f"{addr}: Student ID: {student_id}, Seat No: {seat_no}, Course No: {course_no}")
+            print(f"Total Students: {len(student_list)}: Student ID: {student_id}")
 
         elif message_type == "HEADER2":
             # Perform action for HEADER2
