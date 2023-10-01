@@ -1,0 +1,133 @@
+-------------------------Request Details-------------------------
+ Topic: Semantics
+ Priority: HIGH
+ Description: I don't know how to do this question
+ Time: 03:14 PM
+ Student Id: CT1234567
+ Seat No: 89
+ Course No: CE305: Languages and Compiler
+ Lecturer Name: Mr. Ong
+ 
+Chat History:
+ Mr. Ong:Hello, which question do you not know?
+CT1234567:Hi sir, i don't know how to do this... and that...
+Mr. Ong:Ok, so you do this... and that.. and you'll get this..
+CT1234567:Ok understood, thanks!
+Mr. Ong:Ok, get back to work
+
+-------------------------Request Details-------------------------
+ Topic: Agile Software Development
+ Priority: LOW
+ Description: Hello i need some info about this
+ Time: 03:16 PM
+ Student Id: CT1234566
+ Seat No: 23
+ Course No: CE320: Large Scale Software Programming
+ Lecturer Name: Mr. Ong
+ 
+Chat History:
+ Mr. Ong:Hi what information do you need?
+CT1234566:I just need info about this...
+Mr. Ong:ok here it is...
+CT1234566:thanks!
+
+
+-------------------------Request Details-------------------------
+ Topic: Word Sense and Word Representations
+ Priority: LOW
+ Description: i just need some information
+ Time: 03:26 PM
+ Student Id: CT8888888
+ Seat No: 88
+ Course No: CE314: Natural Language Engineering
+ Lecturer Name: Lecturer
+ 
+Chat History:
+ CT8888888:Hello
+Lecturer:What do you need?
+CT8888888:Some answers
+Lecturer:Here and here
+CT8888888:Thank you
+
+-------------------------Request Details-------------------------
+ Topic: Extreme Programming
+ Priority: HIGH
+ Description: I have a urgent question
+ Time: 02:10 PM
+ Student Id: ct1234567
+ Seat No: 12
+ Course No: CE320: Large Scale Software Programming
+ Lecturer Name: Lecturer1
+ 
+Chat History:
+ Lecturer1:hello
+ct1234567:hello
+Lecturer1:byebye
+
+-------------------------Request Details-------------------------
+ Topic: Lexical Analysis
+ Priority: LOW
+ Description: hahaha
+ Time: 02:10 PM
+ Student Id: ct1231231
+ Seat No: 34
+ Course No: CE305: Languages and Compiler
+ Lecturer Name: Lecturer2
+ 
+Chat History:
+ ct1231231:Jefewfef
+
+-------------------------Request Details-------------------------
+ Topic: Developing in XP
+ Priority: MEDIUM
+ Description: wefwef
+ Time: 02:12 PM
+ Student Id: ct1234567
+ Seat No: 12
+ Course No: CE320: Large Scale Software Programming
+ Lecturer Name: Lecturer2
+ 
+Chat History:
+ Lecturer2:wefwef
+
+-------------------------Request Details-------------------------
+ Topic: Extreme Programming
+ Priority: HIGH
+ Description: Hello
+ Time: 02:58 PM
+ Student Id: CT1234567
+ Seat No: 22
+ Course No: CE320: Large Scale Software Programming
+ Lecturer Name: Lecturer1
+ 
+Chat History:
+ CT1234567:hello
+Lecturer1:hello
+
+-------------------------Request Details-------------------------
+ Topic: Extreme Programming
+ Priority: MEDIUM
+ Description: Hello
+ Time: 09:16 PM
+ Student Id: ct1231231
+ Seat No: 33
+ Course No: CE320: Large Scale Software Programming
+ Lecturer Name: A1
+ 
+Chat History:
+ A1:Hello how are you
+ct1231231:fine thank you
+
+-------------------------Request Details-------------------------
+ Topic: ANTLR
+ Priority: MEDIUM
+ Description: wewe
+ Time: 09:23 PM
+ Student Id: ct3434334
+ Seat No: 23
+ Course No: CE305: Languages and Compiler
+ Lecturer Name: we
+ 
+Chat History:
+ we:helo
+
